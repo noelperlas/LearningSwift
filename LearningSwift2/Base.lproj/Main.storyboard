@@ -19,30 +19,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Via!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTA-2M-gLD">
-                                <rect key="frame" x="162.5" y="170" width="50" height="21"/>
+                                <rect key="frame" x="162.5" y="220" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SK-Vp-XeA">
-                                <rect key="frame" x="161" y="376" width="53" height="30"/>
+                                <rect key="frame" x="161" y="291" width="53" height="30"/>
                                 <state key="normal" title="TAP ME"/>
                                 <connections>
                                     <action selector="ButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l2a-8q-Wl5"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pke-qq-vL5">
+                                <rect key="frame" x="137.5" y="363" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="zoW-Vn-re7"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hau-CZ-KJ5">
+                                <rect key="frame" x="137.5" y="420" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="MeQ-Wn-3LE"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NTA-2M-gLD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="0Yu-m1-K3N"/>
+                            <constraint firstItem="NTA-2M-gLD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="0Yu-m1-K3N"/>
                             <constraint firstItem="9SK-Vp-XeA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2wD-of-w4r"/>
-                            <constraint firstItem="9SK-Vp-XeA" firstAttribute="top" secondItem="NTA-2M-gLD" secondAttribute="bottom" constant="185" id="Uez-cL-bd4"/>
+                            <constraint firstItem="pke-qq-vL5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="48O-Kw-39k"/>
+                            <constraint firstItem="hau-CZ-KJ5" firstAttribute="top" secondItem="pke-qq-vL5" secondAttribute="bottom" constant="27" id="CD9-nI-f5K"/>
+                            <constraint firstItem="9SK-Vp-XeA" firstAttribute="top" secondItem="NTA-2M-gLD" secondAttribute="bottom" constant="50" id="Uez-cL-bd4"/>
+                            <constraint firstItem="pke-qq-vL5" firstAttribute="top" secondItem="9SK-Vp-XeA" secondAttribute="bottom" constant="42" id="ies-6U-P2B"/>
+                            <constraint firstItem="hau-CZ-KJ5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r3M-N0-SqY"/>
                             <constraint firstItem="NTA-2M-gLD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t9A-Gp-Rqc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="TheLabel" destination="NTA-2M-gLD" id="xyQ-11-1ia"/>
+                        <outlet property="text1" destination="pke-qq-vL5" id="Oas-eb-Qcb"/>
+                        <outlet property="text2" destination="hau-CZ-KJ5" id="SaU-YY-8hN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
